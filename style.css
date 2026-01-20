@@ -1,0 +1,1067 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #3E2F1C;
+    line-height: 1.5;
+    background-color: #F5EFE6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Divisor simples entre seções */
+section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C9A24D 20%, #C9A24D 80%, transparent);
+}
+
+/* Estilos para títulos */
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3E2F1C;
+    line-height: 1.2;
+}
+
+/* Estilos para botões - TODOS DA MESMA COR */
+.btn {
+    display: inline-block;
+    background-color: #C9A24D;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(201, 162, 77, 0.2);
+}
+
+.btn:hover {
+    background-color: #b8933a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(201, 162, 77, 0.3);
+}
+
+.highlight {
+    color: #C9A24D;
+    font-weight: 700;
+}
+
+/* Hero Section - ESPAÇO REDUZIDO */
+.hero {
+    background-color: #F5EFE6;
+    padding: 15px 0 30px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Esconder a imagem mobile por padrão (desktop) */
+.mobile-img {
+    display: none;
+}
+
+.desktop-img {
+    display: block;
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #3E2F1C;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #C9A24D;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    color: #5a4a30;
+    font-weight: 400;
+}
+
+/* Pain Points Section */
+.pain-points {
+    background-color: #FFFFFF;
+}
+
+.pain-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.pain-point {
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: #F5EFE6;
+}
+
+.pain-point i {
+    font-size: 2rem;
+    color: #C9A24D;
+    margin-bottom: 10px;
+}
+
+.pain-point p {
+    font-size: 1rem;
+    color: #3E2F1C;
+    font-weight: 400;
+}
+
+.pain-conclusion {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5a4a30;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #F5EFE6;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.pain-conclusion strong {
+    font-weight: 700;
+    color: #C9A24D;
+}
+
+.section-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Belief Break Section */
+.belief-break {
+    background-color: #F5EFE6;
+}
+
+.belief-text {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #3E2F1C;
+    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Course Presentation */
+.course-presentation {
+    background-color: #FFFFFF;
+}
+
+.course-box {
+    background-color: #F5EFE6;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.course-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #5a4a30;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.course-mockup {
+    margin-top: 25px;
+}
+
+.mockup-placeholder {
+    width: 250px;
+    height: 180px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #C9A24D;
+}
+
+.mockup-placeholder i {
+    font-size: 3.5rem;
+    color: #C9A24D;
+    margin-bottom: 10px;
+}
+
+.mockup-placeholder p {
+    color: #C9A24D;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Target Audience */
+.target-audience {
+    background-color: #F5EFE6;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.audience-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.audience-item i {
+    color: #C9A24D;
+    font-size: 1.3rem;
+}
+
+.audience-item p {
+    font-size: 1rem;
+    color: #3E2F1C;
+    font-weight: 400;
+}
+
+.not-for {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-left: 4px solid #C9A24D;
+}
+
+.not-for i {
+    color: #C9A24D;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.not-for p {
+    font-size: 1rem;
+    color: #3E2F1C;
+    font-weight: 400;
+}
+
+/* Learning Section */
+.learning {
+    background-color: #FFFFFF;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.learning-item {
+    text-align: center;
+    padding: 25px 15px;
+    background-color: #F5EFE6;
+    border-radius: 10px;
+}
+
+.learning-item i {
+    font-size: 2.3rem;
+    color: #C9A24D;
+    margin-bottom: 15px;
+}
+
+.learning-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #3E2F1C;
+    font-weight: 500;
+}
+
+/* Modules Section */
+.modules {
+    background-color: #F5EFE6;
+}
+
+.modules-list {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.module {
+    background-color: #FFFFFF;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 5px solid #C9A24D;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.module-number {
+    background-color: #C9A24D;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    min-width: 100px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.module h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #3E2F1C;
+    font-weight: 500;
+}
+
+.modules-note {
+    text-align: center;
+    font-style: italic;
+    color: #5a4a30;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+/* Included Section */
+.included {
+    background-color: #FFFFFF;
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.included-item {
+    text-align: center;
+    padding: 25px 15px;
+    background-color: #F5EFE6;
+    border-radius: 10px;
+}
+
+.included-item i {
+    font-size: 2.3rem;
+    color: #C9A24D;
+    margin-bottom: 15px;
+}
+
+.included-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #3E2F1C;
+    font-weight: 500;
+}
+
+/* Creator Section */
+.creator {
+    background-color: #F5EFE6;
+}
+
+.creator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.creator-text {
+    text-align: center;
+}
+
+.creator-image {
+    order: -1;
+}
+
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #C9A24D;
+}
+
+.image-placeholder i {
+    font-size: 4rem;
+    color: #C9A24D;
+    margin-bottom: 10px;
+}
+
+.image-placeholder p {
+    color: #C9A24D;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.creator-text h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #3E2F1C;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.creator-text p {
+    font-size: 1.1rem;
+    color: #5a4a30;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Investment Section */
+.investment {
+    background-color: #FFFFFF;
+}
+
+.investment-box {
+    background-color: #F5EFE6;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #C9A24D;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.price {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    color: #C9A24D;
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.investment-details {
+    margin: 20px 0;
+}
+
+.investment-details p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.investment-details i {
+    color: #C9A24D;
+}
+
+/* Guarantee Section */
+.guarantee {
+    background-color: #F5EFE6;
+}
+
+.guarantee-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.guarantee-content i {
+    font-size: 3rem;
+    color: #C9A24D;
+}
+
+.guarantee-content p {
+    font-size: 1.2rem;
+    color: #5a4a30;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Final CTA */
+.final-cta {
+    background-color: #C9A24D;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.final-cta h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.final-cta p {
+    font-size: 1.5rem;
+    color: #F5EFE6;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+/* Desktop Layout - IMAGEM MAIOR, TEXTO MENOR E MAIS PARA BAIXO */
+@media (min-width: 992px) {
+    .hero {
+        padding: 0 0 60px !important; /* REMOVIDO padding-top para imagem ficar no topo */
+    }
+    
+    .hero-content {
+        flex-direction: row;
+        align-items: flex-start; /* Alinhar no topo */
+        justify-content: space-between;
+        gap: 60px;
+        margin-top: 0; /* Garantir que comece no topo */
+    }
+    
+    .hero-text {
+        order: 1;
+        text-align: left;
+        flex: 1;
+        padding-right: 50px;
+        padding-top: 160px !important; /* AUMENTADO: texto mais para baixo */
+    }
+    
+    .hero-image {
+        order: 2;
+        flex: 0.9; /* AUMENTADO: imagem maior (60% vs 50%) */
+        margin: 0;
+        padding-top: 0; /* Garantir que a imagem fique no topo */
+        max-width: none; /* Remover limite de largura */
+    }
+    
+    /* Mostrar imagem desktop e esconder mobile */
+    .desktop-img {
+        display: block;
+    }
+    
+    .mobile-img {
+        display: none;
+    }
+    
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 0; /* Garantir que a imagem fique colada no topo */
+        transform: scale(1.1); /* AUMENTADO: imagem 10% maior */
+        transform-origin: top left;
+    }
+    
+    .hero h1 {
+        font-size: 3rem !important; /* DIMINUÍDO: título menor */
+        margin-bottom: 20px !important; /* espaço abaixo do título */
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem !important; /* DIMINUÍDO: subtítulo menor */
+        margin-bottom: 18px !important; /* espaço abaixo do subtítulo */
+        line-height: 1.3 !important;
+    }
+    
+    .hero p {
+        font-size: 1.05rem !important; /* DIMINUÍDO: texto menor */
+        margin-bottom: 22px !important; /* espaço abaixo do parágrafo */
+        line-height: 1.5 !important;
+    }
+    
+    .hero .btn {
+        margin-top: 20px !important; /* AUMENTADO: mais espaço acima do botão */
+        margin-bottom: 15px !important; /* AUMENTADO: mais espaço abaixo do botão */
+        font-size: 1rem !important; /* DIMINUÍDO: botão um pouco menor */
+        padding: 12px 28px !important;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+        margin-bottom: 35px;
+    }
+    
+    .creator-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    .creator-text {
+        order: 1;
+        text-align: left;
+        flex: 2;
+    }
+    
+    .creator-image {
+        order: 2;
+        flex: 1;
+    }
+    
+    .pain-points-grid,
+    .audience-grid,
+    .learning-grid,
+    .included-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .price {
+        font-size: 4.5rem;
+    }
+    
+    .final-cta {
+        padding: 80px 0;
+    }
+    
+    .final-cta h2 {
+        font-size: 3rem;
+    }
+}
+
+/* MOBILE: LAYOUT COMPACTO - TEXTO EM CIMA, IMAGEM EMBAIXO */
+@media (max-width: 991px) {
+    body {
+        line-height: 1.4;
+    }
+    
+    /* REMOVER TODO O ESPAÇO EM BRANCO - AINDA MAIS COMPACTO */
+    section {
+        padding: 20px 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Remover linha divisória no mobile */
+    section:not(:last-child)::after {
+        display: none;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* HERO - IMAGEM EM CIMA, TEXTO EMBAIXO - SEM ESPAÇO EM BRANCO */
+    .hero {
+        padding: 0 0 10px !important; /* AINDA MENOS ESPAÇO */
+        position: relative;
+        margin-top: 0 !important;
+    }
+    
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 75; /* ZERO ESPAÇO entre imagem e texto */
+    }
+    
+    /* IMAGEM FICA COLADA NO TOPO */
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 0px !important; /* SEM MARGEM */
+        padding: 0;
+        order: 1;
+    }
+    
+    /* Mostrar imagem mobile e esconder desktop */
+    .desktop-img {
+        display: none;
+    }
+    
+    .mobile-img {
+        display: block;
+    }
+    
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    /* TEXTO FICA IMEDIATAMENTE ABAIXO DA IMAGEM - REMOVIDOS TODOS OS EFEITOS */
+    .hero-text {
+        width: 100%;
+        margin-top: -50%; /* SOBE O TEXTO PARA COMEÇAR NA METADE INFERIOR DA IMAGEM */
+        padding-top: 5px;
+        text-align: center;
+        order: 2;
+        /* SEM EFEITOS: sem background-color, sem border-radius, sem box-shadow, sem padding extra */
+    }
+    
+    /* TÍTULOS GRANDES E GROSSOS NO MOBILE - MENOS MARGEM */
+    .hero h1 {
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important; /* AUMENTADO: pequeno espaço abaixo do título */
+        margin-top: 0 !important;
+    }
+    
+    .section-title {
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .creator-text h3 {
+        font-size: 1.6rem !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .final-cta h2 {
+        font-size: 1.7rem !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin-bottom: 12px !important;
+    }
+    
+    /* TEXTO PEQUENO NO MOBILE (subtítulos e conteúdo) - MENOS MARGEM */
+    .hero h2 {
+        font-size: 1.1rem !important;
+        font-weight: 500 !important;
+        line-height: 1.3 !important;
+        margin-bottom: 15px !important; /* AUMENTADO: pequeno espaço abaixo do subtítulo */
+        color: #C9A24D !important;
+    }
+    
+    .hero p {
+        font-size: 0.92rem !important;
+        font-weight: 400 !important;
+        line-height: 1.4 !important;
+        margin-bottom: 20px !important; /* AUMENTADO: pequeno espaço abaixo do parágrafo */
+        color: #5a4a30 !important;
+    }
+    
+    /* Botões compactos mas visíveis */
+    .btn {
+        font-size: 0.92rem !important;
+        padding: 12px 24px !important; /* AUMENTADO: padding do botão */
+        width: 100%;
+        max-width: 280px;
+        margin: 10px auto 20px !important; /* AUMENTADO: espaço em cima e embaixo do botão */
+        display: block;
+    }
+    
+    /* CONTEÚDO DAS OUTRAS SEÇÕES PEQUENO - MENOS MARGEM */
+    .pain-point p,
+    .belief-text,
+    .course-box p,
+    .audience-item p,
+    .not-for p,
+    .learning-item h3,
+    .module h3,
+    .included-item h3,
+    .creator-text p,
+    .investment-details p,
+    .guarantee-content p,
+    .final-cta p,
+    .modules-note,
+    .pain-conclusion {
+        font-size: 0.9rem !important;
+        font-weight: 400 !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    /* Grids em uma coluna - MENOS GAP */
+    .pain-points-grid,
+    .audience-grid,
+    .learning-grid,
+    .included-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    
+    /* Itens mais compactos - MENOS PADDING */
+    .pain-point,
+    .audience-item,
+    .learning-item,
+    .included-item,
+    .module {
+        padding: 12px 10px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    /* Ícones menores */
+    .pain-point i,
+    .learning-item i,
+    .included-item i {
+        font-size: 1.6rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .audience-item i,
+    .not-for i {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Boxes mais compactos - MENOS PADDING */
+    .course-box,
+    .investment-box,
+    .guarantee-content {
+        padding: 20px 15px !important;
+    }
+    
+    .course-mockup {
+        margin-top: 15px !important;
+    }
+    
+    .mockup-placeholder {
+        width: 180px !important;
+        height: 130px !important;
+    }
+    
+    .mockup-placeholder i {
+        font-size: 2.5rem !important;
+    }
+    
+    .mockup-placeholder p {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Números de módulo menores */
+    .module-number {
+        min-width: 80px !important;
+        font-size: 0.8rem !important;
+        padding: 3px 8px !important;
+    }
+    
+    /* Preço ajustado */
+    .price {
+        font-size: 2.5rem !important;
+        margin: 12px 0 !important;
+    }
+    
+    /* CTA Final mais compacto */
+    .final-cta {
+        padding: 30px 0 !important;
+    }
+    
+    .final-cta p {
+        font-size: 1rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Creator image menor */
+    .creator-content {
+        gap: 15px !important;
+    }
+    
+    .creator-image {
+        order: -1 !important;
+    }
+    
+    .image-placeholder {
+        width: 140px !important;
+        height: 140px !important;
+        margin-bottom: 12px;
+    }
+    
+    .image-placeholder i {
+        font-size: 2.8rem !important;
+    }
+    
+    /* Espaçamentos reduzidos AINDA MAIS */
+    .section-button {
+        margin-top: 15px !important;
+    }
+    
+    .pain-conclusion {
+        margin-top: 12px !important;
+        padding: 12px !important;
+    }
+    
+    .not-for {
+        padding: 15px !important;
+    }
+    
+    /* MOBILE PEQUENO - TELAS MUITO PEQUENAS */
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 1.6rem !important;
+            margin-bottom: 12px !important; /* AUMENTADO: pequeno espaço abaixo do título */
+        }
+        
+        .section-title,
+        .creator-text h3 {
+            font-size: 1.6rem !important;
+            margin-bottom: 12px !important;
+        }
+        
+        .final-cta h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 10px !important;
+        }
+        
+        .hero h2 {
+            font-size: 1.05rem !important;
+            margin-bottom: 12px !important; /* AUMENTADO: pequeno espaço abaixo do subtítulo */
+        }
+        
+        .hero p,
+        .pain-point p,
+        .belief-text,
+        .course-box p,
+        .audience-item p,
+        .not-for p,
+        .learning-item h3,
+        .module h3,
+        .included-item h3,
+        .creator-text p,
+        .investment-details p,
+        .guarantee-content p,
+        .final-cta p,
+        .modules-note,
+        .pain-conclusion {
+            font-size: 0.86rem !important;
+            margin-bottom: 6px !important;
+        }
+        
+        .hero p {
+            margin-bottom: 18px !important; /* AUMENTADO: pequeno espaço abaixo do parágrafo */
+        }
+        
+        .btn {
+            font-size: 0.88rem !important;
+            padding: 10px 20px !important; /* AUMENTADO: padding do botão */
+            max-width: 260px;
+            margin: 8px auto 15px !important; /* AUMENTADO: espaço em cima e embaixo do botão */
+        }
+        
+        .price {
+            font-size: 2.2rem !important;
+            margin: 10px 0 !important;
+        }
+        
+        .image-placeholder {
+            width: 120px !important;
+            height: 120px !important;
+        }
+        
+        .module {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px !important;
+        }
+        
+        .module-number {
+            align-self: flex-start;
+            min-width: 70px !important;
+        }
+        
+        .final-cta {
+            padding: 25px 0 !important;
+        }
+    }
+    
+    /* Mobile grid ajustado para 2 colunas em tablets pequenos */
+    @media (min-width: 481px) and (max-width: 768px) {
+        .pain-points-grid,
+        .audience-grid,
+        .learning-grid,
+        .included-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 12px !important;
+        }
+    }
+}
+
+/* Animações para elementos ao rolar */
+.pain-point, .learning-item, .module, .included-item, .audience-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.pain-point.animate-in, 
+.learning-item.animate-in, 
+.module.animate-in, 
+.included-item.animate-in,
+.audience-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-text {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-text.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
