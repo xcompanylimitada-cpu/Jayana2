@@ -124,13 +124,16 @@ section:not(:last-child)::after {
     line-height: 1.2;
 }
 
-.hero h2 {
-    font-family: 'Cormorant Garamond', serif;
+/* SUBTÍTULO DESTACADO - COM FONTE MAIS LEGÍVEL E NEGRITO */
+.highlight-subtitle {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
-    font-weight: 500;
-    color: #C9A24D;
+    font-weight: 700; /* NEGRITO FORTE */
+    color: #3E2F1C;
     margin-bottom: 12px;
     line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.2px; /* Melhor legibilidade */
 }
 
 .hero p {
@@ -627,10 +630,15 @@ section:not(:last-child)::after {
         margin-bottom: 20px !important; /* espaço abaixo do título */
     }
     
-    .hero h2 {
-        font-size: 1.8rem !important; /* DIMINUÍDO: subtítulo menor */
-        margin-bottom: 18px !important; /* espaço abaixo do subtítulo */
+    /* SUBTÍTULO DESTACADO - DESKTOP */
+    .highlight-subtitle {
+        font-size: 1.8rem !important; /* Tamanho ajustado */
+        font-weight: 700 !important; /* NEGRITO FORTE */
+        text-align: left !important; /* Alinhado à esquerda no desktop */
         line-height: 1.3 !important;
+        letter-spacing: 0.3px !important; /* Melhor legibilidade */
+        margin-bottom: 18px !important;
+        color: #3E2F1C !important;
     }
     
     .hero p {
@@ -764,6 +772,18 @@ section:not(:last-child)::after {
         line-height: 1.2 !important;
         margin-bottom: 15px !important; /* AUMENTADO: pequeno espaço abaixo do título */
         margin-top: 0 !important;
+    }
+    
+    /* SUBTÍTULO DESTACADO - MOBILE */
+    .highlight-subtitle {
+        font-size: 1.2rem !important; /* Tamanho adequado para mobile */
+        font-weight: 700 !important; /* NEGRITO FORTE */
+        line-height: 1.3 !important; /* Espaçamento adequado */
+        text-align: center !important;
+        margin-bottom: 12px !important;
+        color: #3E2F1C !important;
+        letter-spacing: 0.1px !important; /* Melhor legibilidade */
+        padding: 0 10px !important; /* Pequeno padding lateral */
     }
     
     .section-title {
@@ -952,6 +972,15 @@ section:not(:last-child)::after {
         .hero h1 {
             font-size: 1.6rem !important;
             margin-bottom: 12px !important; /* AUMENTADO: pequeno espaço abaixo do título */
+        }
+        
+        /* SUBTÍTULO DESTACADO - MOBILE PEQUENO */
+        .highlight-subtitle {
+            font-size: 1.05rem !important; /* Tamanho ajustado para telas muito pequenas */
+            font-weight: 700 !important; /* NEGRITO FORTE */
+            line-height: 1.3 !important;
+            margin-bottom: 10px !important;
+            padding: 0 5px !important;
         }
         
         .section-title,
